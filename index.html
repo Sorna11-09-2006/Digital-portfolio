@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20;
+            background-color: pink; 
+           
+        }
+
+        header {
+            background-color: purple; 
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 1.5rem;
+        }
+
+        nav {
+            background-color: #1261A0; 
+            color: yellow;
+            text-align: center;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 20;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: yellow;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: yellow;
+        }
+
+        .section-content {
+            background-color: white;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+            color: green; 
+        }
+
+        .download-button {
+            background-color: #0A1931; 
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .download-button:hover {
+            background-color: pink; 
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: black; 
+            color: pink;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>SORNALAKSHMI S</h1>
+            <p>DEPARTMENT OF COMPUTER SCIENCE</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#achievement">Achievements</a></li>
+            <li><a href="#resume">Resume</a></li>
+          </nav>
+      </ul>
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+          
+ <p>I'm a person who has a<b> good manner, quick learner, critical thinker, punctual, multi-tasker</b> also who is passionate in coding. 
+            I am interest in web designing . I'm also good in extra curriculam like <b>sports,DIY etc</b>.</p>
+</div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p><b>Higher Secondary Education:</b> 10th & 12th</p>
+            <p><b>School:</b> G.H.S.School</p>
+            <p><b>Degree:</b> BSc Computer Science</p>
+            <p><b>College:</b> Soka Ikeda College of Arts and Science for Women</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+              
+                <li>HTML</li>
+                <li>Python</li>
+                <li>CSS</li>
+                <li>Data Structures</li>
+                <li>Java</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="achievement">
+        <div class="section-content">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Got first place in intercollegiate competition(mime)</li>
+                <li>Attended webinar in Kaashiv InfoTech(IV)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-content" style="text-align: center;">
+            <h2>Resume</h2>
+            <a href="resume.pdf" target="_blank" class="download-button">Download CV</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sornalakshmi S</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
